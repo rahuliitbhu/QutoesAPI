@@ -41,7 +41,7 @@ useEffect(()=>{
 
     
 const {loading,error,data}=useQuery(GET_ALL_QUOTES,{
-    fetchPolicy:cache-and-network
+    fetchPolicy:"cache-and-network"
 })
 
 if(loading) return <h1>Loading.....</h1>
