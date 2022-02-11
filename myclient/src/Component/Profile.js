@@ -14,7 +14,7 @@ export default function Profile() {
 
     const navigate=useNavigate()
     const {loading,error,data}=useQuery(GET_MY_PROFILE,{
-        fetchPolicy:"cache-and-network",
+        
         refetchQueries:[GET_MY_PROFILE, // queries
             'Myprofile']
     })
