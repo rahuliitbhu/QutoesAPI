@@ -17,6 +17,7 @@ const port = process.env.PORT || 4000;
 
 const app = express();
 const httpServer = http.createServer(app);
+const __dirname=path.resolve();
 
 if(process.env.NODE_ENV!=="production")
 {dotenv.config()}
@@ -75,7 +76,7 @@ if(process.env.NODE_ENV=="production"){
     app.use(express.static('myclient/build'));
     //const path= require('path')
     app.get("*",(req,res)=>{
-        res.sendFile(path.resolve(dirname('myclient','build','index.html')));
+        res.sendFile(path.resolve(__dirname,'myclient','build','index.html'));
     })
 }
 
