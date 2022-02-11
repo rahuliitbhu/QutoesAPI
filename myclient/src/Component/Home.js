@@ -40,7 +40,9 @@ useEffect(()=>{
 */// above method is traditional method for req calling in graphql from frontend
 
     
-const {loading,error,data}=useQuery(GET_ALL_QUOTES)
+const {loading,error,data}=useQuery(GET_ALL_QUOTES,{
+    fetchPolicy:cache-and-network
+})
 
 if(loading) return <h1>Loading.....</h1>
 /*
